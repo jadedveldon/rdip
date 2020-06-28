@@ -1,0 +1,47 @@
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    background-size: cover;
+    width: 100%;
+}
+
+.list {
+    float: left;
+}
+
+.img {
+    float: left;
+}
+
+#img{
+    float:right;
+}
+
+.rdip{
+    float:right;
+    font-size:25px;
+}
+
+.anchor {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.homepage{
+    border:5px solid black;
+    border-collapse:collapse;
+    text-align:center;
+}
+.form {
+    height: 50px;
+    text-align: center;
+}
+
+.regtable {
+    width: 500px;
+}
