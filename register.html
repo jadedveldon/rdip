@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body id="registerbody">
-    <form>
+    <form name="form1">
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname"><br>
         <label for="lname">Last name:</label><br>
@@ -21,7 +21,7 @@
         <label for="description">Description</label><br>
         <textarea id="description" rows="10" cols="10">Enter text here...</textarea><br>
         <lable for="subjects">Subjects of interest</lable><br>
-        <select id="subjects" name="subjects" multiple><br>
+        <select id="subjects" name="subjects" multiple required><br>
             <option value="cs">CS</option>
             <option value="ece">ECE</option>
             <option value="eee">EEE</option>
@@ -29,7 +29,35 @@
             <option value="civil">Civil</option>
             <option value="it">IT</option>
         </select>
-        <input class="submitBtn" type="submit" formaction="values.html">
+        <input class="submitBtn" type="submit" onclick="check(document.form1.fname,document.form1.lname,document.form1.phnumber)">
+        <script language="javascript" type="text/javascript">
+            function check(fname,lname) {
+                var letters = /^[A-Za-z]+$/;
+                var numbers = /^[0-9]+$/;
+                if (fname.value.match(letters)) {
+                    return true;
+                }
+                else {
+                    alert('Please input alphabet characters only');
+                    return false;
+                }
+                if (lname.value.match(letters)) {
+                    return true;
+                }
+                else {
+                    alert('Please input alphabet characters only');
+                    return false;
+                }
+                if (phnumber.value.match(numbers)) {
+                    return true;
+                }
+                else {
+                    alert('Please input numbers only');
+                    return false;
+                }
+
+            }
+        </script>
 
     </form>
 </body>
