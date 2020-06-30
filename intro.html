@@ -14,9 +14,10 @@
             <li><a href="register.html">register</a></li>
             <li><a href="tables.html">courses</a></li>
         </ul>
-        <h1 class="introtitle" title="name">Sapan Raj Mathur</h1>
+        <h1 class="introtitle" title="name" onclick="colourchange(this, 'red')">Sapan Raj Mathur</h1>
         <h1 class="introtitle">Vidya Jyothi Institute of Technology</h1>
         <h1 class="introtitle"><a href="tables.html">Computer Science Engineering</a></h1>
+        <p id="this">this</p>
         <p id="hidden">HTML stands for Hypertext Markup Language. It allows the user to create and structure sections, paragraphs, headings, links, and blockquotes for web pages and applications. HTML is not a programming language, meaning it doesn’t have the ability to create dynamic functionality. Instead, it makes it possible to organize and format documents, similarly to Microsoft Word.</p>
     </div>
     <div class="relative">
@@ -27,6 +28,9 @@
             }
             
             console.log(avg());
+            function colourchange() {
+                document.getElementsById("this").style.color = "red";
+            }
         </script>
         <style>
             table, th, td {

@@ -23,5 +23,66 @@
         console.log(Math.sin(90 * rand / 180));
         console.log(Math.cos(90 * rand / 180));
     </script>
+    <input type="date" id="date">
+    <button onclick="printDate()">Date</button>
+    <script>
+        function printDate() {
+            var x = document.getElementById("date").value;
+            console.log(x);
+        }
+    </script>
+    <script type="text/javascript">
+        function controlFlow() {
+            var num = prompt("Please enter a number");
+            if (10 < num && num < 100) {
+                document.getElementById("demo1").innerHTML = "The number lies in between 10 and 100";
+            } else {
+                document.getElementById("demo1").innerHTML = "The number does not lie in between 10 and 100";
+            }
+        }
+        function switchCase() {
+            var num = prompt("Enter a number");
+            switch (ch) {
+                case num > 10 && num < 50:
+                    document.getElementById("demo1").innerHTML = "The number lies in between 10 and 50";
+                    break;
+                case num < 100 && num > 49:
+                    document.getElementById("demo2").innerHTML = "The number lies in between 50 and 100";
+            }
+        }
+        try {
+            function fibonacci() {
+                var num = document.getElementById("demo3").value
+                if (num <= 1) {
+                    return 1;
+                }
+                return fibonacci(num - 1) + fibonacci(num - 2);
+            }
+        }
+        catch (err) {
+            document.getElementById("demo4").innerHTML = err.message;
+        }
+        finally {
+            document.getElementById("demo4").innerHTML = "Finally block ";
+        }
+    </script>
+    <ul>
+        <li>JavaScript is a dynamic programming language that can add interactivity to a website. </li>
+        <li>
+            Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
+            <ol>
+                <li>Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+                <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
+                <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
+            </ol>
+        </li>
+    </ul>
+    <button onclick="controlFlow()">Check numbers from 10-100</button>
+    <p id="demo1"></p>
+    <button onclick="switchCase()">Check numbers from 10-100</button>
+    <p id="demo2"></p>
+    <input type="number" id="demo3">
+    <button onclick="fibonacci()">Check fibonacci</button>
+    <p id="demo4"></p>
 </body>
-</html>
+</html >
