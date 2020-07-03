@@ -3,6 +3,47 @@
     <title>
         Javascript basics
     </title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").dblclick(function () {
+                $(this).toggleClass("divClass2");
+            });
+        });
+    </script>
+
+    <style>
+        .divClass1 {
+            padding: 5px;
+            text-align: center;
+            background-color: yellow;
+            border: solid 1px;
+        }
+
+        .divClass2 {
+            padding: 5px;
+            text-align: center;
+            background-color: grey;
+            border: solid 1px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#gfg").toggle();
+            });
+        });
+    </script>
+    <style>
+        #gfg {
+            color: green;
+            border: 5px solid black;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <script language="javascript" type="text/javascript">
@@ -84,5 +125,9 @@
     <input type="number" id="demo3">
     <button onclick="fibonacci()">Check fibonacci</button>
     <p id="demo4"></p>
+    <div class="divClass1">Double click to change colour!!</div>
+    <div id="gfg">Hello there   GENERAL KANOBI!</div>
+
+    <button>Click to hide and show the above div</button>
 </body>
 </html >
