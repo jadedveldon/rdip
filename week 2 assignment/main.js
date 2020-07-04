@@ -1,17 +1,37 @@
-function cal(x) {
-    var op = document.getElementById("operator").value;
-    if (op === null) {
-        return document.getElementById("operand1").value += x;
-    }
-    else {
-        return document.getElementById("operand2").value += x;
-    }
+function sum() {
+    var a = parseInt(document.getElementById("operand_1").value);
+    var b = parseInt(document.getElementById("operand_2").value);
+    return document.getElementById("result").value = a + b;
 }
-function oper(x) {
-    return document.getElementById("operator").value += x;
+function diff() {
+    var a = parseInt(document.getElementById("operand_1").value);
+    var b = parseInt(document.getElementById("operand_2").value);
+    return document.getElementById("result").value = a - b;
+}
+function mul() {
+    var a = parseInt(document.getElementById("operand_1").value);
+    var b = parseInt(document.getElementById("operand_2").value);
+    return document.getElementById("result").value = a * b;
+}
+function quot() {
+    var a = parseInt(document.getElementById("operand_1").value);
+    var b = parseInt(document.getElementById("operand_2").value);
+    return document.getElementById("result").value = a / b;
+}
+function percent() {
+    var a = parseInt(document.getElementById("operand_1").value);
+    var b = parseInt(document.getElementById("operand_2").value);
+    return document.getElementById("result").value = (a/100)*b;
+}
+function abso() {
+    var a = parseInt(document.getElementById("operand_1").value);
+    return document.getElementById("result").value = Math.abs(a);
+}
+function sqroot() {
+    var a = parseInt(document.getElementById("operand_1").value);
+    return document.getElementById("result").value = Math.sqrt(a);
 }
 function cleartab() {
-    console.log("Cleared");
     return document.getElementById("result").value = "";
 }
 function validate_name() {
