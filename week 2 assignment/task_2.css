@@ -1,7 +1,12 @@
-#formTable {
-    width: 500px;
-}
-.form {
-    height: 50px;
+body {
     text-align: center;
+    align-content: center;
+    padding-top: 100px;
+    background-color: #2a3638;
+    color: #eb4a5f;
+}
+
+button {
+    color: #2a3638;
+    background-color: #eb4a5f;
 }
